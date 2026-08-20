@@ -1,0 +1,57 @@
+{
+  "name": "sajilo-qr",
+  "version": "1.0.0",
+  "description": "Simple, predictable, and lightweight QR code generation library for JavaScript and TypeScript.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "qr",
+    "qr-code",
+    "generator",
+    "sajilo",
+    "qrcode",
+    "svg",
+    "canvas",
+    "typescript",
+    "nepal"
+  ],
+  "author": "Ankit Khatri KC",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "tsx --test test/*.test.ts",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@types/qrcode": "^1.5.6",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "tsup": "^8.5.1",
+    "tsx": "^4.23.12",
+    "typescript": "5.9.3"
+  }
+}
