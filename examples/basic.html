@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sajilo QR - Browser Example</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #1e293b;
+      background: #f8fafc;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 24px;
+      color: #0f172a;
+    }
+    p.tagline {
+      color: #64748b;
+      margin-top: -8px;
+      margin-bottom: 24px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      border: 1px solid #f1f5f9;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>sajilo-qr</h1>
+    <p class="tagline">QR codes, the Sajilo way (सजिलो - easy & simple).</p>
+    <img id="qr" alt="Generated QR Code" />
+  </div>
+
+  <script type="module">
+    import { sajilo } from '../dist/index.mjs';
+
+    async function run() {
+      // 1. Generate QR code Data URL
+      const qrDataUrl = await sajilo.generate('https://example.com', {
+        size: 300,
+        margin: 2,
+        dark: '#0f172a',
+        light: '#ffffff',
+      });
+
+      // 2. Set directly to <img> element
+      const imgElement = document.querySelector('#qr');
+      if (imgElement) {
+        imgElement.src = qrDataUrl;
+      }
+    }
+
+    run().catch(console.error);
+  </script>
+</body>
+</html>
