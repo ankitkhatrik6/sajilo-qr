@@ -1,14 +1,16 @@
+<div align="center">
+
 # sajilo-qr
 
 [![npm version](https://img.shields.io/npm/v/sajilo-qr.svg?style=flat-square)](https://www.npmjs.com/package/sajilo-qr)
 [![npm downloads](https://img.shields.io/npm/dm/sajilo-qr.svg?style=flat-square)](https://www.npmjs.com/package/sajilo-qr)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-> QR codes, the Sajilo way.
+**sajilo-qr** is a simple, predictable, and lightweight QR code generation library for JavaScript and TypeScript.<br/>
+The library is built with one philosophy: generating QR codes should be effortless, dependable, and require zero boilerplate for common use cases.
 
-**sajilo-qr** is a simple, predictable, and lightweight QR code generation library for JavaScript and TypeScript.
+</div>
 
-*"Sajilo"* (सजिलो) means **"easy"** or **"simple"** in Nepali. The library is built with one philosophy: generating QR codes should be effortless, dependable, and require zero boilerplate for common use cases.
 
 ---
 
